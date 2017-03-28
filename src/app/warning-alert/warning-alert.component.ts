@@ -12,5 +12,5 @@ import {Component} from "@angular/core";
     `]
 })
 export class WarningAlertComponent {
-    warning = 'This is the last warning, you are in Danger';
+    warning: string = 'This is the last warning, you are in Danger';
 }
