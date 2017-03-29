@@ -1,12 +1,23 @@
 <label>serverName</label>
-<input
-        type="text"
-        class="form-control"
-        (input)="onUpdateServerName($event)"
->
+<!--<input-->
+        <!--type="text"-->
+        <!--class="form-control"-->
+        <!--(input)="onUpdateServerName($event)"-->
+<!--&gt;-->
 <!-- $event is global paarameter which hold informations for any form field, like input, click... -->
 <!-- in JS we can access it with event.target.value, but in typeScript we need (<HTMLInputElement>event.target).value -->
+
+<h4>two way databinding</h4>
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
+>
+<!-- radi isto kao i ovo gore samo sto updajtuje i sebe-->
+<br>
 <p>serverName: {{ serverName }}</p>
+
+<hr>
 
 <button
         [disabled]="disableServer"
