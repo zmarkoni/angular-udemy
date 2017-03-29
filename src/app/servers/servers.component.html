@@ -1,8 +1,19 @@
+<label>serverName</label>
+<input
+        type="text"
+        class="form-control"
+        (input)="onUpdateServerName($event)"
+>
+<!-- $event is global paarameter which hold informations for any form field, like input, click... -->
+<!-- in JS we can access it with event.target.value, but in typeScript we need (<HTMLInputElement>event.target).value -->
+<p>serverName: {{ serverName }}</p>
+
 <button
-        [disabled]="!allowNewServer"
+        [disabled]="disableServer"
         class="btn btn-primary"
         (click)="onCreateServer()">Add Server</button>
 
 <p>{{ serverCreationStatus }}</p>
+<p>disableServer: {{ disableServer }}</p>
 
 <app-server></app-server>

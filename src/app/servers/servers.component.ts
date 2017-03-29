@@ -7,16 +7,21 @@ import { Component } from '@angular/core';
     templateUrl: './servers.component.html',
 })
 export class ServersComponent {
-    allowNewServer: boolean = false;
+    disableServer: boolean = true;
     serverCreationStatus: string = 'No server was created!';
+    serverName: any = '';
 
     constructor() {
         setTimeout(() => {
-            this.allowNewServer = true;
+            this.disableServer = false;
         }, 2000)
     }
 
     onCreateServer() {
         this.serverCreationStatus = 'Server is created!';
+    }
+
+    onUpdateServerName(event: Event) {
+        this.serverName = (<HTMLInputElement>event.target).value //need like this because of typeScript, regulary it will be event.target.value
     }
 }
