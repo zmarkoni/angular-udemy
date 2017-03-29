@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-servers',
     // selector: '[app-servers]',
     // selector: '.app-servers',
-    templateUrl: './servers.component.html',
+    templateUrl: './servers.component.html'
 })
 export class ServersComponent {
     disableServer: boolean = true;
