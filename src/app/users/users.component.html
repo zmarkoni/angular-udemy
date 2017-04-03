@@ -18,18 +18,20 @@
         [disabled]="username === ''"
         (click)="username = ''">Reset User</button>
     </div>
+    <!-- Obrati ovde paznju na (click) kako varijabli pristupamo iko je pod navodnicima ali samo kad radimo binding sa desne strane-->
   </div>
 </div>
 
 <hr>
 
 <h3>My solution</h3>
-
+<label>username</label>
 <input
         type="text"
         class="form-control"
         [(ngModel)]="myUsername"
         (input)="onUpdateUserName($event)"
+        placeholder="enter username"
 >
 <br>
 <p>username: {{ myUsername }}</p>
