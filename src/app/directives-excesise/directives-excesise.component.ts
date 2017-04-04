@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesExcesiseComponent implements OnInit {
   showParagraph: boolean = true;
-  buttonClicks: Array<number> = [];
-  click: number = 0;
+  buttonClicks: Array<Date> = [];
 
   constructor() { }
 
@@ -16,9 +15,7 @@ export class DirectivesExcesiseComponent implements OnInit {
   }
 
   toggleParagraph() {
-    this.click += 1;
-    this.buttonClicks.push(this.click);
+    this.buttonClicks.push(new Date());
     this.showParagraph = !this.showParagraph;
-    console.log('this.showParagraph: ' + this.showParagraph);
   }
 }
